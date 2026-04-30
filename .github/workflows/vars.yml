@@ -3,7 +3,7 @@ name: 'Custom Env Vars'
 on:
  pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
+ workflow_dispatch:
 
 env:
   DAY_OF_THE_WEEK: Funday
@@ -18,12 +18,12 @@ jobs:
      Greeting: Dear
      testvar: value-2
 
-     steps:
-     - name: print-values-of-env-vars
-     run:
+   steps:
+    - name: print-values-of-env-vars
+      run: |
         echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         echo "testvar  $testvar"
         echo "testvar  ${{ env.testvar }}"
-     env:
-      First_Name: Student
-      testvar: value-3
+      env:
+          First_Name: Student
+          testvar: value-3
