@@ -6,7 +6,7 @@ on:
  workflow_dispatch:
 
 env:
-  DAY_OF_THE_WEEK: Funday
+  DAY_OF_WEEK: Funday
   testvar: value-1
 
 jobs:
