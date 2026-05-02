@@ -15,12 +15,12 @@ jobs:
     steps:
       - run: echo ${{ env.Greeting}} ${{env.name}} ${{env.prediction}}
 
-  windows-environment-variables:
-    runs-on: windows-latest
+  #windows-environment-variables:
+    #runs-on: windows-latest
     #steps:
       #- run: env
 
-  macos-environment-variables:
-    runs-on: macos-latest
+  #macos-environment-variables:
+    #runs-on: macos-latest
     #steps:
       #- run: env
