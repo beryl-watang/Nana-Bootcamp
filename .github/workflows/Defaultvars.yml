@@ -6,15 +6,21 @@ on:
 jobs:
   ubuntu-environment-variables:
     runs-on: ubuntu-latest
+
+    env:
+        Greeting: hello
+        name: Beryl
+        prediction: you will get an offer soon
+
     steps:
-      - run: env
+      - run: echo ${{ env.Greeting}} ${{env.name}} ${{env.prediction}}
 
   windows-environment-variables:
     runs-on: windows-latest
-    steps:
-      - run: env
+    #steps:
+      #- run: env
 
   macos-environment-variables:
     runs-on: macos-latest
-    steps:
-      - run: env
+    #steps:
+      #- run: env
